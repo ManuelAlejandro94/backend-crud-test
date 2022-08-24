@@ -1,8 +1,10 @@
 from flask import request
+from flask_cors import cross_origin
 
 def register_routes(app, scouts):
 
     @app.route('/clients', methods=['POST'])
+    @cross_origin()
     def post_client():
         busqueda_params = request.get_json()
 

@@ -1,4 +1,5 @@
 from flask import Flask
+from flask_cors import CORS
 import logging.config
 from src.crud.scouts import Scouts
 from src.crud.web.services import get_clients, new_client, update_client, delete_client
@@ -17,6 +18,7 @@ def create_application(config):
     logging_config(config.get('logging'))
 
     app = Flask(__name__)
+    cors = CORS(app)
 
     mysql_config = config.get('mysql')
 

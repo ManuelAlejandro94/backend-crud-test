@@ -1,8 +1,10 @@
 from flask import request
+from flask_cors import cross_origin
 
 def register_routes(app, scouts):
 
     @app.route('/clients/delete/<id>', methods=['PUT'])
+    @cross_origin()
     def delete_clients(id):
         multimap = request.args if request.method == 'PUT' else request.form
         busqueda_params = multimap.to_dict(flat=True)

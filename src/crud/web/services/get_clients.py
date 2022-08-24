@@ -1,9 +1,10 @@
-import json
 from flask import request
+from flask_cors import cross_origin
 
 def register_routes(app, scouts):
 
     @app.route('/clients', methods=['GET'])
+    @cross_origin()
     def search_all_clients():
         multimap = request.args if request.method == 'GET' else request.form
         busqueda_params = multimap.to_dict(flat=True)
