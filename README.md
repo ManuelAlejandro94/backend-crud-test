@@ -58,7 +58,7 @@ _**NOTA:** La base de datos utilizada es mongo, con una única colección. El id
 ## Despliegue de la aplicación
 
 ### Consola
-Teniendo el entorno virtual activo y encontradose dentro de `nexu-backend-test` usando la configuración por defecto:
+Teniendo el entorno virtual activo y encontradose dentro de `backend-crud-test` usando la configuración por defecto:
 ```
 python -m src.crud.web.__main__
 ```
