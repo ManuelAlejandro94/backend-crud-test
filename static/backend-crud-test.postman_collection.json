@@ -1,0 +1,120 @@
+{
+	"info": {
+		"_postman_id": "055b941d-3f98-4218-b616-b5fb3aad7afa",
+		"name": "backend-crud-test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22976212"
+	},
+	"item": [
+		{
+			"name": "clients",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Url.Localhost}}/clients",
+					"host": [
+						"{{Url.Localhost}}"
+					],
+					"path": [
+						"clients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create client",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"ALEJANDRO\",\r\n    \"lastName\": \"ALVAREZ\",\r\n    \"phone\": \"2292235259\",\r\n    \"email\": \"manuel_ale94@outlook.com\",\r\n    \"age\": 28,\r\n    \"status\": \"Nuevo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Url.Localhost}}/clients",
+					"host": [
+						"{{Url.Localhost}}"
+					],
+					"path": [
+						"clients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update client",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"ALEJANDRO\",\r\n    \"lastName\": \"ALVAREZ DE LA VEGA\",\r\n    \"phone\": \"2292235259\",\r\n    \"email\": \"manuel_ale94@outlook.com\",\r\n    \"age\": 28,\r\n    \"status\": \"Nuevo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Url.Localhost}}/clients/:id",
+					"host": [
+						"{{Url.Localhost}}"
+					],
+					"path": [
+						"clients",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete client",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Url.Localhost}}/clients/delete/:id",
+					"host": [
+						"{{Url.Localhost}}"
+					],
+					"path": [
+						"clients",
+						"delete",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
