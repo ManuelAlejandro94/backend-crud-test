@@ -1,0 +1,9 @@
+app:
+    app_id: backend-crud-test
+mysql:
+  host: 127.0.0.1
+  port: 3306
+  database: crud_test_db
+  user: crud-test-usr
+  password: crud-t3$t-p@$$w0rd
+  raise_on_warnings: True
