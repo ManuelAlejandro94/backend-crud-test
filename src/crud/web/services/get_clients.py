@@ -27,7 +27,9 @@ def register_routes(app, scouts):
                         "updated": Updated
                     }
                     response.append(obj)
-            return response
+            return {
+                "clients": response
+            }
         # except Exception as e:
         #     error = {
         #         "codigo": str(e.error.value[0].value[0]) + "." + str(e.error.value[1]),
